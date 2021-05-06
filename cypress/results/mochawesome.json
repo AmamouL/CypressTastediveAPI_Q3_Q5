@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-06T07:43:14.944Z",
+    "end": "2021-05-06T07:43:20.198Z",
+    "duration": 5254,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7f64fea2-48f6-450c-a958-9c0a44840b7a",
+      "title": "",
+      "fullFile": "cypress/integration/search.spec.js",
+      "file": "cypress/integration/search.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9b297053-f979-4a41-94a0-c303f5511a1c",
+          "title": "Search Recommends",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "check limit 4 - Search recommends for Guardians Of The Galaxy",
+              "fullTitle": "Search Recommends check limit 4 - Search recommends for Guardians Of The Galaxy",
+              "timedOut": null,
+              "duration": 1494,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.itemRecommend(dataFeeder.searchTerm, limit, 0).then(function (response) {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('Similar');\n  expect(response.body.Similar.Results).lengthOf(limit);\n});",
+              "err": {},
+              "uuid": "279005c2-599e-4d9a-844b-12b481fec2e0",
+              "parentUUID": "9b297053-f979-4a41-94a0-c303f5511a1c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check limit 2 - Search recommends for Guardians Of The Galaxy",
+              "fullTitle": "Search Recommends check limit 2 - Search recommends for Guardians Of The Galaxy",
+              "timedOut": null,
+              "duration": 1063,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.itemRecommend(dataFeeder.searchTerm, limit, 0).then(function (response) {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('Similar');\n  expect(response.body.Similar.Results).lengthOf(limit);\n});",
+              "err": {},
+              "uuid": "18e35664-6ab2-440f-ac7d-6c78c04fde40",
+              "parentUUID": "9b297053-f979-4a41-94a0-c303f5511a1c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Info Flag Disabled - Search recommends for Guardians Of The Galaxy",
+              "fullTitle": "Search Recommends Info Flag Disabled - Search recommends for Guardians Of The Galaxy",
+              "timedOut": null,
+              "duration": 1082,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.itemRecommend(dataFeeder.searchTerm, 1, 0).then(function (response) {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('Similar');\n});",
+              "err": {},
+              "uuid": "293943ca-e339-4eaa-9e92-1780bdd583d1",
+              "parentUUID": "9b297053-f979-4a41-94a0-c303f5511a1c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Info Flag enabled - Search recommends for Guardians Of The Galaxy",
+              "fullTitle": "Search Recommends Info Flag enabled - Search recommends for Guardians Of The Galaxy",
+              "timedOut": null,
+              "duration": 1182,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.itemRecommend(dataFeeder.searchTerm, 1, 1).then(function (response) {\n  expect(response.status).to.eq(200);\n  expect(response.body.Similar).to.have.property('Info');\n  expect(response.body.Similar).to.have.property('Results');\n  expect(response.body.Similar.Info[0]).to.have.property('wTeaser');\n  expect(response.body.Similar.Info[0]).to.have.property('wUrl');\n  expect(response.body.Similar.Info[0]).to.have.property('yUrl');\n  expect(response.body.Similar.Info[0]).to.have.property('yID');\n  expect(response.body.Similar.Info[0].wUrl).contains(\"http\");\n  expect(response.body.Similar.Results).to.have.length(1);\n});",
+              "err": {},
+              "uuid": "0d9f50d2-862a-4260-b87f-1ba95f06d978",
+              "parentUUID": "9b297053-f979-4a41-94a0-c303f5511a1c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "279005c2-599e-4d9a-844b-12b481fec2e0",
+            "18e35664-6ab2-440f-ac7d-6c78c04fde40",
+            "293943ca-e339-4eaa-9e92-1780bdd583d1",
+            "0d9f50d2-862a-4260-b87f-1ba95f06d978"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4821,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

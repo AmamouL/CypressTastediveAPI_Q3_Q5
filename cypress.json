@@ -1,0 +1,11 @@
+{
+    "baseUrl": "https://tastedive.com",
+    "projectId": "1631gy",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+    }
+}
